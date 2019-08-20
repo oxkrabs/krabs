@@ -30,7 +30,7 @@ namespace krabs.Infrastructure.Identity.Config.Configuration
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
                     RequireConsent = true,
-                    AccessTokenLifetime = 120, //Seconds
+                    AccessTokenLifetime = 3600, //Seconds
                     RedirectUris =
                     {
                         "http://localhost:5100/callback",

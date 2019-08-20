@@ -63,7 +63,8 @@ namespace krabs.SSO.Controllers.Account
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Login", "Account", new {returnUrl=model.ReturnUrl});
+                return Redirect(model.ReturnUrl);
+                //return RedirectToAction("Login", "Account", new {returnUrl=model.ReturnUrl});
             }
             throw new NotImplementedException();
         }
