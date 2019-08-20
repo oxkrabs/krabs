@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="krabs.Infrastructure.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Context" t="Include">
+          <e p="ApplicationDbContext.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="Migrations" t="Include">
+            <e p="20180109192453_CreateIdentitySchema.cs" t="Include" />
+            <e p="20180109192453_CreateIdentitySchema.Designer.cs" t="Include" />
+            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+          </e>
+        </e>
+        <e p="krabs.Infrastructure.Data.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Infrastructure.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="krabs.Infrastructure.Identity" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entities" t="Include">
+          <e p="ApplicationUser.cs" t="Include" />
+        </e>
+        <e p="krabs.Infrastructure.Identity.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Infrastructure.Identity.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="krabs.Infrastructure.Identity.Config" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configuration" t="Include">
+          <e p="Config.cs" t="Include" />
+          <e p="IdentityServerConfig.cs" t="Include" />
+        </e>
+        <e p="krabs.Infrastructure.Identity.Config.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Infrastructure.Identity.Config.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="krabs.sln" t="IncludeFlat" />
+      <e p="krabs.SSO" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="AspIdUsers.db" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="Account" t="Include">
+            <e p="AccountController.cs" t="Include" />
+            <e p="AccountOptions.cs" t="Include" />
+            <e p="ExternalController.cs" t="Include" />
+            <e p="ExternalProvider.cs" t="Include" />
+            <e p="LoggedOutViewModel.cs" t="Include" />
+            <e p="LoginInputModel.cs" t="Include" />
+            <e p="LoginViewModel.cs" t="Include" />
+            <e p="LogoutInputModel.cs" t="Include" />
+            <e p="LogoutViewModel.cs" t="Include" />
+            <e p="RedirectViewModel.cs" t="Include" />
+            <e p="RegisterInputModel.cs" t="Include" />
+            <e p="RegisterViewModel.cs" t="Include" />
+          </e>
+          <e p="Consent" t="Include">
+            <e p="ConsentController.cs" t="Include" />
+            <e p="ConsentInputModel.cs" t="Include" />
+            <e p="ConsentOptions.cs" t="Include" />
+            <e p="ConsentViewModel.cs" t="Include" />
+            <e p="ProcessConsentResult.cs" t="Include" />
+            <e p="ScopeViewModel.cs" t="Include" />
+          </e>
+          <e p="Device" t="Include">
+            <e p="DeviceAuthorizationInputModel.cs" t="Include" />
+            <e p="DeviceAuthorizationViewModel.cs" t="Include" />
+            <e p="DeviceController.cs" t="Include" />
+          </e>
+          <e p="Diagnostics" t="Include">
+            <e p="DiagnosticsController.cs" t="Include" />
+            <e p="DiagnosticsViewModel.cs" t="Include" />
+          </e>
+          <e p="Extensions.cs" t="Include" />
+          <e p="Grants" t="Include">
+            <e p="GrantsController.cs" t="Include" />
+            <e p="GrantsViewModel.cs" t="Include" />
+          </e>
+          <e p="Home" t="Include">
+            <e p="ErrorViewModel.cs" t="Include" />
+            <e p="HomeController.cs" t="Include" />
+          </e>
+          <e p="SecurityHeadersAttribute.cs" t="Include" />
+        </e>
+        <e p="identityserver4_log.txt" t="Include" />
+        <e p="krabs.SSO.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.SSO.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="SeedData.cs" t="Include" />
+        <e p="Startup.cs" t="Include" />
+        <e p="tempkey.rsa" t="Include" />
+        <e p="updateUI.ps1" t="Include" />
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Account" t="Include">
+            <e p="AccessDenied.cshtml" t="Include" />
+            <e p="LoggedOut.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+            <e p="Logout.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+          </e>
+          <e p="Consent" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Device" t="Include">
+            <e p="Success.cshtml" t="Include" />
+            <e p="UserCodeCapture.cshtml" t="Include" />
+            <e p="UserCodeConfirmation.cshtml" t="Include" />
+          </e>
+          <e p="Diagnostics" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Grants" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ScopeListItem.cshtml" t="Include" />
+            <e p="_ValidationSummary.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+            <e p="Redirect.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+            <e p="site.less" t="Include" />
+            <e p="site.min.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="icon.gif" t="Include" />
+          <e p="js" t="Include">
+            <e p="signin-redirect.js" t="Include" />
+            <e p="signout-redirect.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="css" t="Include">
+                <e p="bootstrap.css" t="Include" />
+                <e p="bootstrap.css.map" t="Include" />
+                <e p="bootstrap.min.css" t="Include" />
+              </e>
+              <e p="fonts" t="Include">
+                <e p="glyphicons-halflings-regular.eot" t="Include" />
+                <e p="glyphicons-halflings-regular.svg" t="Include" />
+                <e p="glyphicons-halflings-regular.ttf" t="Include" />
+                <e p="glyphicons-halflings-regular.woff" t="Include" />
+                <e p="glyphicons-halflings-regular.woff2" t="Include" />
+              </e>
+              <e p="js" t="Include">
+                <e p="bootstrap.js" t="Include" />
+                <e p="bootstrap.min.js" t="Include" />
+              </e>
+            </e>
+            <e p="jquery" t="Include">
+              <e p="jquery.js" t="Include" />
+              <e p="jquery.min.js" t="Include" />
+              <e p="jquery.min.map" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="build" t="Include">
+                <e p="release.js" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Spa" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ClientApp" t="Include">
+          <e p="boot.tsx" t="Include" />
+          <e p="components" t="Include">
+            <e p="CallbackPage.tsx" t="Include" />
+            <e p="Counter.tsx" t="Include" />
+            <e p="Home.tsx" t="Include" />
+            <e p="Layout.tsx" t="Include" />
+            <e p="UserInfo.tsx" t="Include" />
+          </e>
+          <e p="configureStore.ts" t="Include" />
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="routes.tsx" t="Include" />
+          <e p="store" t="Include">
+            <e p="Counter.ts" t="Include" />
+            <e p="index.ts" t="Include" />
+          </e>
+          <e p="userManager.ts" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+          <e p="SampleDataController.cs" t="Include" />
+        </e>
+        <e p="node_modules/@babel/core" t="IncludeRecursive" />
+        <e p="node_modules/@babel/preset-typescript" t="IncludeRecursive" />
+        <e p="node_modules/@semantic-ui-react/event-stack" t="IncludeRecursive" />
+        <e p="node_modules/@types" t="IncludeRecursive">
+          <e p="history" t="IncludeRecursive" />
+          <e p="node" t="IncludeRecursive" />
+          <e p="prop-types" t="IncludeRecursive" />
+          <e p="react" t="IncludeRecursive" />
+          <e p="react-dom" t="IncludeRecursive" />
+          <e p="react-dropzone" t="IncludeRecursive" />
+          <e p="react-hot-loader" t="IncludeRecursive" />
+          <e p="react-portal" t="IncludeRecursive" />
+          <e p="react-redux" t="IncludeRecursive" />
+          <e p="react-router" t="IncludeRecursive" />
+          <e p="react-router-dom" t="IncludeRecursive" />
+          <e p="react-router-redux" t="IncludeRecursive" />
+          <e p="tapable" t="IncludeRecursive" />
+          <e p="uglify-js" t="IncludeRecursive" />
+          <e p="webpack" t="IncludeRecursive" />
+          <e p="webpack-env" t="IncludeRecursive" />
+        </e>
+        <e p="node_modules/aspnet-prerendering" t="IncludeRecursive" />
+        <e p="node_modules/aspnet-webpack" t="IncludeRecursive" />
+        <e p="node_modules/aspnet-webpack-react" t="IncludeRecursive" />
+        <e p="node_modules/autoprefixer" t="IncludeRecursive" />
+        <e p="node_modules/awesome-typescript-loader" t="IncludeRecursive" />
+        <e p="node_modules/axios" t="IncludeRecursive" />
+        <e p="node_modules/babel-loader" t="IncludeRecursive" />
+        <e p="node_modules/blueimp-load-image" t="IncludeRecursive" />
+        <e p="node_modules/browser-sync" t="IncludeRecursive" />
+        <e p="node_modules/chalk" t="IncludeRecursive" />
+        <e p="node_modules/commander" t="IncludeRecursive" />
+        <e p="node_modules/css-loader" t="IncludeRecursive" />
+        <e p="node_modules/csstype" t="IncludeRecursive" />
+        <e p="node_modules/domain-task" t="IncludeRecursive" />
+        <e p="node_modules/es6-promise" t="IncludeRecursive" />
+        <e p="node_modules/eslint" t="IncludeRecursive" />
+        <e p="node_modules/eslint-plugin-import" t="IncludeRecursive" />
+        <e p="node_modules/eslint-plugin-react" t="IncludeRecursive" />
+        <e p="node_modules/event-source-polyfill" t="IncludeRecursive" />
+        <e p="node_modules/file-loader" t="IncludeRecursive" />
+        <e p="node_modules/history" t="IncludeRecursive" />
+        <e p="node_modules/hoist-non-react-statics" t="IncludeRecursive" />
+        <e p="node_modules/html-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules/immutable" t="IncludeRecursive" />
+        <e p="node_modules/lodash" t="IncludeRecursive" />
+        <e p="node_modules/mini-css-extract-plugin" t="IncludeRecursive" />
+        <e p="node_modules/moment" t="IncludeRecursive" />
+        <e p="node_modules/node-noop" t="IncludeRecursive" />
+        <e p="node_modules/node-sass" t="IncludeRecursive" />
+        <e p="node_modules/npm" t="IncludeRecursive" />
+        <e p="node_modules/oidc-client" t="IncludeRecursive" />
+        <e p="node_modules/postcss-flexbugs-fixes" t="IncludeRecursive" />
+        <e p="node_modules/postcss-loader" t="IncludeRecursive" />
+        <e p="node_modules/promise" t="IncludeRecursive" />
+        <e p="node_modules/prop-types" t="IncludeRecursive" />
+        <e p="node_modules/raf" t="IncludeRecursive" />
+        <e p="node_modules/react" t="IncludeRecursive" />
+        <e p="node_modules/react-dev-utils" t="IncludeRecursive" />
+        <e p="node_modules/react-dom" t="IncludeRecursive" />
+        <e p="node_modules/react-hot-loader" t="IncludeRecursive" />
+        <e p="node_modules/react-lines-ellipsis" t="IncludeRecursive" />
+        <e p="node_modules/react-moment" t="IncludeRecursive" />
+        <e p="node_modules/react-notify-toast" t="IncludeRecursive" />
+        <e p="node_modules/react-portal" t="IncludeRecursive" />
+        <e p="node_modules/react-redux" t="IncludeRecursive" />
+        <e p="node_modules/react-router-dom" t="IncludeRecursive" />
+        <e p="node_modules/react-router-redux" t="IncludeRecursive" />
+        <e p="node_modules/react-slick" t="IncludeRecursive" />
+        <e p="node_modules/redux" t="IncludeRecursive" />
+        <e p="node_modules/redux-logger" t="IncludeRecursive" />
+        <e p="node_modules/redux-oidc" t="IncludeRecursive" />
+        <e p="node_modules/redux-thunk" t="IncludeRecursive" />
+        <e p="node_modules/rxjs" t="IncludeRecursive" />
+        <e p="node_modules/sass-loader" t="IncludeRecursive" />
+        <e p="node_modules/semantic-ui-css" t="IncludeRecursive" />
+        <e p="node_modules/semantic-ui-react" t="IncludeRecursive" />
+        <e p="node_modules/source-map" t="IncludeRecursive" />
+        <e p="node_modules/source-map-loader" t="IncludeRecursive" />
+        <e p="node_modules/style-loader" t="IncludeRecursive" />
+        <e p="node_modules/symbol-observable" t="IncludeRecursive" />
+        <e p="node_modules/tslib" t="IncludeRecursive" />
+        <e p="node_modules/tslint" t="IncludeRecursive" />
+        <e p="node_modules/tslint-react" t="IncludeRecursive" />
+        <e p="node_modules/typescript" t="IncludeRecursive" />
+        <e p="node_modules/url-loader" t="IncludeRecursive" />
+        <e p="node_modules/webpack" t="IncludeRecursive" />
+        <e p="node_modules/webpack-cli" t="IncludeRecursive" />
+        <e p="node_modules/webpack-dev-middleware" t="IncludeRecursive" />
+        <e p="node_modules/webpack-hot-middleware" t="IncludeRecursive" />
+        <e p="node_modules/webpack-merge" t="IncludeRecursive" />
+        <e p="npm-shrinkwrap.json" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="Spa.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="package.json" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="silent_renew" t="Include">
+          <e p="index.js" t="Include" />
+          <e p="silent_renew.html" t="Include" />
+        </e>
+        <e p="Spa.csproj" t="IncludeRecursive" />
+        <e p="Startup.cs" t="Include" />
+        <e p="tsconfig.json" t="Include" />
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="webpack.config.js" t="Include" />
+        <e p="webpack.config.silent.js" t="Include" />
+        <e p="webpack.config.vendor.js" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="dist" t="Include">
+            <e p="82f60bd0b94a1ed68b1e6e309ce2e8c3.svg" t="Include" />
+            <e p="8e3c7f5520f5ae906c6cf6d7f3ddcd19.eot" t="Include" />
+            <e p="962a1bf31c081691065fe333d9fa8105.svg" t="Include" />
+            <e p="a1a749e89f578a49306ec2b055c073da.svg" t="Include" />
+            <e p="b87b9ba532ace76ae9f6edfe9f72ded2.ttf" t="Include" />
+            <e p="main.js" t="Include" />
+            <e p="vendor-manifest.json" t="Include" />
+            <e p="vendor.css" t="Include" />
+            <e p="vendor.js" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+        </e>
+      </e>
+      <e p="src" t="Include">
+        <e p="backend" t="Include" />
+        <e p="Frontend" t="Include" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_krabs.1798738835.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+  </component>
+</project>

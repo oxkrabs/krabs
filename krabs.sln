@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{09359444-5193-44AA-89ED-977C349914C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1FB73088-EC5E-4EC8-B624-94A637DED9AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{7A2A7BBB-6D6E-4650-9E67-D0F285C406C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.SSO", "krabs.SSO\krabs.SSO.csproj", "{E77B0046-97B6-41CD-99F2-F6805032DA9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Infrastructure.Identity", "krabs.Infrastructure.Identity\krabs.Infrastructure.Identity.csproj", "{A12DA1AB-C999-4F31-9C17-261BC8903FE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Infrastructure.Data", "krabs.Infrastructure.Data\krabs.Infrastructure.Data.csproj", "{5BE4B71C-880B-4740-B2E2-3B5E946C1B96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Infrastructure.Identity.Config", "krabs.Infrastructure.Identity.Config\krabs.Infrastructure.Identity.Config.csproj", "{D4EEB65C-2D5B-4B0D-B562-BF01C844BD22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spa", "Spa\Spa.csproj", "{417EDFE9-4B36-4F2F-99EC-FA8F473D3D6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{09359444-5193-44AA-89ED-977C349914C0} = {1FB73088-EC5E-4EC8-B624-94A637DED9AC}
+		{7A2A7BBB-6D6E-4650-9E67-D0F285C406C4} = {1FB73088-EC5E-4EC8-B624-94A637DED9AC}
+		{E77B0046-97B6-41CD-99F2-F6805032DA9B} = {09359444-5193-44AA-89ED-977C349914C0}
+		{A12DA1AB-C999-4F31-9C17-261BC8903FE6} = {7A2A7BBB-6D6E-4650-9E67-D0F285C406C4}
+		{5BE4B71C-880B-4740-B2E2-3B5E946C1B96} = {7A2A7BBB-6D6E-4650-9E67-D0F285C406C4}
+		{D4EEB65C-2D5B-4B0D-B562-BF01C844BD22} = {7A2A7BBB-6D6E-4650-9E67-D0F285C406C4}
+		{417EDFE9-4B36-4F2F-99EC-FA8F473D3D6A} = {09359444-5193-44AA-89ED-977C349914C0}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E77B0046-97B6-41CD-99F2-F6805032DA9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77B0046-97B6-41CD-99F2-F6805032DA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77B0046-97B6-41CD-99F2-F6805032DA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77B0046-97B6-41CD-99F2-F6805032DA9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A12DA1AB-C999-4F31-9C17-261BC8903FE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A12DA1AB-C999-4F31-9C17-261BC8903FE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A12DA1AB-C999-4F31-9C17-261BC8903FE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A12DA1AB-C999-4F31-9C17-261BC8903FE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE4B71C-880B-4740-B2E2-3B5E946C1B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE4B71C-880B-4740-B2E2-3B5E946C1B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE4B71C-880B-4740-B2E2-3B5E946C1B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE4B71C-880B-4740-B2E2-3B5E946C1B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4EEB65C-2D5B-4B0D-B562-BF01C844BD22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EEB65C-2D5B-4B0D-B562-BF01C844BD22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EEB65C-2D5B-4B0D-B562-BF01C844BD22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EEB65C-2D5B-4B0D-B562-BF01C844BD22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417EDFE9-4B36-4F2F-99EC-FA8F473D3D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417EDFE9-4B36-4F2F-99EC-FA8F473D3D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417EDFE9-4B36-4F2F-99EC-FA8F473D3D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417EDFE9-4B36-4F2F-99EC-FA8F473D3D6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
