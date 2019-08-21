@@ -22,7 +22,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\krabs.Infrastructure.Data\krabs.Infrastructure.Data.csproj" />
       <ProjectReference Include="..\krabs.Infrastructure.Identity.Config\krabs.Infrastructure.Identity.Config.csproj" />
       <ProjectReference Include="..\krabs.Infrastructure.Identity\krabs.Infrastructure.Identity.csproj" />
     </ItemGroup>

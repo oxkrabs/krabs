@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using IdentityServer4.Models;
 
-namespace krabs.Infrastructure.Identity.Config.Configuration
+namespace krabs.SSO.Config
 {
     public static class Config
     {

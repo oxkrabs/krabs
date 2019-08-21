@@ -7,10 +7,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using krabs.Infrastructure.Data.Context;
+using IdentityServer4.EntityFramework.DbContexts;
+using IdentityServer4.EntityFramework.Mappers;
 using krabs.Infrastructure.Identity.Entities;
 using Microsoft.Extensions.Logging;
-using krabs.Infrastructure.Identity.Config.Configuration;
+using krabs.SSO.Config;
+using krabs.SSO.Data.Entities;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace krabs.SSO
 {
@@ -20,6 +23,44 @@ namespace krabs.SSO
         public IConfiguration Configuration { get; }
         public IHostingEnvironment Environment { get; }
 
+        private void InitializeDatabase(IApplicationBuilder app)
+        {
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
+
+                var context = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
+                context.Database.Migrate();
+                if (!context.Clients.Any())
+                {
+                    foreach (var client in Config.Config.GetClients())
+                    {
+                        context.Clients.Add(client.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
+
+                if (!context.IdentityResources.Any())
+                {
+                    foreach (var resource in Config.Config.GetIdentityResources())
+                    {
+                        context.IdentityResources.Add(resource.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
+
+                if (!context.ApiResources.Any())
+                {
+                    foreach (var resource in Config.Config.GetApis())
+                    {
+                        context.ApiResources.Add(resource.ToEntity());
+                    }
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        
         public Startup(IConfiguration configuration, IHostingEnvironment environment, ILogger<Startup> logger)
         {
             _logger = logger;
@@ -45,6 +86,7 @@ namespace krabs.SSO
 
         public void Configure(IApplicationBuilder app)
         {
+            InitializeDatabase(app);
             if (Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeFlat">
-      <e p="krabs.Infrastructure.Data" t="IncludeRecursive">
+      <e p="krabs.Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Context" t="Include">
-          <e p="ApplicationDbContext.cs" t="Include" />
+        <e p="Interfaces" t="Include">
+          <e p="IRepository.cs" t="Include" />
+          <e p="IUnitOfWork.cs" t="Include" />
         </e>
-        <e p="Data" t="Include">
-          <e p="Migrations" t="Include">
-            <e p="20180109192453_CreateIdentitySchema.cs" t="Include" />
-            <e p="20180109192453_CreateIdentitySchema.Designer.cs" t="Include" />
-            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
-          </e>
-        </e>
-        <e p="krabs.Infrastructure.Data.csproj" t="IncludeRecursive" />
+        <e p="krabs.Domain.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
-              <e p="krabs.Infrastructure.Data.AssemblyInfo.cs" t="Include" />
+              <e p="krabs.Domain.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -39,10 +33,7 @@
       </e>
       <e p="krabs.Infrastructure.Identity.Config" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Configuration" t="Include">
-          <e p="Config.cs" t="Include" />
-          <e p="IdentityServerConfig.cs" t="Include" />
-        </e>
+        <e p="Configuration" t="Include" />
         <e p="krabs.Infrastructure.Identity.Config.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -52,11 +43,34 @@
           </e>
         </e>
       </e>
+      <e p="krabs.Services.UserManagement" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="krabs.Services.UserManagement.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Services.UserManagement.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Startup.cs" t="Include" />
+        <e p="wwwroot" t="Include" />
+      </e>
       <e p="krabs.sln" t="IncludeFlat" />
       <e p="krabs.SSO" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
         <e p="AspIdUsers.db" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Config" t="Include">
+          <e p="Config.cs" t="Include" />
+          <e p="IdentityServerConfig.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="Account" t="Include">
             <e p="AccountController.cs" t="Include" />
@@ -99,6 +113,28 @@
             <e p="HomeController.cs" t="Include" />
           </e>
           <e p="SecurityHeadersAttribute.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="Entities" t="Include">
+            <e p="ApplicationDbContext.cs" t="Include" />
+          </e>
+          <e p="Migrations" t="Include">
+            <e p="20180109192453_CreateIdentitySchema.cs" t="Include" />
+            <e p="20180109192453_CreateIdentitySchema.Designer.cs" t="Include" />
+            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+            <e p="IdentityServer" t="Include">
+              <e p="ConfigurationDb" t="Include">
+                <e p="20190820205307_InitialIdentityServerConfigurationDbMigration.cs" t="Include" />
+                <e p="20190820205307_InitialIdentityServerConfigurationDbMigration.Designer.cs" t="Include" />
+                <e p="ConfigurationDbContextModelSnapshot.cs" t="Include" />
+              </e>
+              <e p="PersistedGrantDb" t="Include">
+                <e p="20190820205237_InitialIdentityServerPersistedGrantDbMigration.cs" t="Include" />
+                <e p="20190820205237_InitialIdentityServerPersistedGrantDbMigration.Designer.cs" t="Include" />
+                <e p="PersistedGrantDbContextModelSnapshot.cs" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="identityserver4_log.txt" t="Include" />
         <e p="krabs.SSO.csproj" t="IncludeRecursive" />
