@@ -9,7 +9,7 @@ namespace krabs.Domain.Interfaces
         TEntity GetById<T>(T id);
         IQueryable<TEntity> GetAll();
         void Update(TEntity obj);
-        void Remove<T>(T id);
+        void Remove(Guid id);
         int SaveChanges();
     }
 }

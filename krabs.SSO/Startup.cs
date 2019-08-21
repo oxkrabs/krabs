@@ -7,12 +7,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Reflection;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
+using krabs.Infrastructure.Data.Entities;
 using krabs.Infrastructure.Identity.Entities;
 using Microsoft.Extensions.Logging;
 using krabs.SSO.Config;
-using krabs.SSO.Data.Entities;
+using krabs.SSO.Mediatr.Service;
+using MediatR;
 using Microsoft.EntityFrameworkCore.Internal;
 
 namespace krabs.SSO
@@ -30,6 +33,7 @@ namespace krabs.SSO
                 serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
 
                 var context = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
+                //context.Database.EnsureCreated();
                 context.Database.Migrate();
                 if (!context.Clients.Any())
                 {
@@ -60,7 +64,6 @@ namespace krabs.SSO
             }
         }
 
-        
         public Startup(IConfiguration configuration, IHostingEnvironment environment, ILogger<Startup> logger)
         {
             _logger = logger;
@@ -70,6 +73,8 @@ namespace krabs.SSO
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -82,6 +87,16 @@ namespace krabs.SSO
             // Configure identity server
             services.AddIdentityServer(Configuration, Environment, _logger);
             services.AddAuthentication(IdentityConstants.ApplicationScheme);
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
+            services.AddTransient<INotifierMediatorService, NotifierMediatorService>();
         }
 
         public void Configure(IApplicationBuilder app)

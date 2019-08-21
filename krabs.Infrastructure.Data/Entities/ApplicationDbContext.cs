@@ -2,7 +2,7 @@ using krabs.Infrastructure.Identity.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace krabs.SSO.Data.Entities
+namespace krabs.Infrastructure.Data.Entities
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

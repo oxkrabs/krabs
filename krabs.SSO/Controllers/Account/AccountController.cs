@@ -12,6 +12,7 @@ using IdentityServer4.Models;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
 using krabs.Infrastructure.Identity.Entities;
+using krabs.SSO.Mediatr.Service;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -29,6 +30,7 @@ namespace krabs.SSO.Controllers.Account
         private readonly IClientStore _clientStore;
         private readonly IAuthenticationSchemeProvider _schemeProvider;
         private readonly IEventService _events;
+        private readonly INotifierMediatorService _notifierMediatorService;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
@@ -36,7 +38,8 @@ namespace krabs.SSO.Controllers.Account
             IIdentityServerInteractionService interaction,
             IClientStore clientStore,
             IAuthenticationSchemeProvider schemeProvider,
-            IEventService events)
+            IEventService events,
+            INotifierMediatorService notifierMediatorService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -44,6 +47,7 @@ namespace krabs.SSO.Controllers.Account
             _clientStore = clientStore;
             _schemeProvider = schemeProvider;
             _events = events;
+            _notifierMediatorService = notifierMediatorService;
         }
         
         
@@ -56,6 +60,7 @@ namespace krabs.SSO.Controllers.Account
         // TODO: This is temporary, refactor it out when messageSystem is live.
         public async Task<IActionResult> OnRegister(RegisterInputModel model)
         {
+            _notifierMediatorService.Notify("REGISTRATION STARTED");
             var user = new ApplicationUser
             {
                 UserName = model.Username
@@ -63,9 +68,11 @@ namespace krabs.SSO.Controllers.Account
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
+                _notifierMediatorService.Notify("REGISTRATION COMPLETED : TRUE");
                 return Redirect(model.ReturnUrl);
                 //return RedirectToAction("Login", "Account", new {returnUrl=model.ReturnUrl});
             }
+            _notifierMediatorService.Notify("REGISTRATION COMPLETED : FALSE");
             throw new NotImplementedException();
         }
         
