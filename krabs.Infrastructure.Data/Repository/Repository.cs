@@ -11,37 +11,35 @@ namespace krabs.Infrastructure.Data.Repository
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly ApplicationDbContext Db;
-        protected readonly DbSet<TEntity> DbSet;
 
         public Repository(ApplicationDbContext context)
         {
-            Db = context;
-            DbSet = Db.Set<TEntity>();
+            this.Db = context;
         }
 
-        public void Add(TEntity obj)
+        public virtual void Add(TEntity obj)
         {
-            DbSet.Add(obj);
+            this.Db.Add<TEntity>(obj);
         }
 
-        public TEntity GetById<T>(T id)
+        public virtual TEntity GetById<T>(T id)
         {
-            return DbSet.Find(id);
+            return Db.Find<TEntity>(id);
         }
 
-        public IQueryable<TEntity> GetAll()
+        public virtual IQueryable<TEntity> GetAll()
         {
-            return DbSet;
+            return this.Db.Set<TEntity>().AsNoTracking();
         }
 
-        public void Update(TEntity obj)
+        public virtual void Update(TEntity obj)
         {
-            DbSet.Update(obj);
+            Db.Update<TEntity>(obj);
         }
 
-        public void Remove(Guid id)
+        public virtual void Remove(Guid id)
         {
-            DbSet.Remove(DbSet.Find(id));
+            Db.Remove<TEntity>(Db.Find<TEntity>(id));
         }
 
         public int SaveChanges()

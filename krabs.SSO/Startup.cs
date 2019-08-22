@@ -8,15 +8,23 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Reflection;
+using AutoMapper;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
+using krabs.Application.AutoMapper;
+using krabs.Domain.Core.Bus;
+using krabs.Domain.EventHandlers;
+using krabs.Domain.Events;
+using krabs.Infrastructure.Bus;
 using krabs.Infrastructure.Data.Entities;
+using krabs.Infrastructure.Identity.Config.Configuration;
 using krabs.Infrastructure.Identity.Entities;
 using Microsoft.Extensions.Logging;
 using krabs.SSO.Config;
 using krabs.SSO.Mediatr.Service;
 using MediatR;
 using Microsoft.EntityFrameworkCore.Internal;
+using krabs.Infrastructure.IoC;
 
 namespace krabs.SSO
 {
@@ -33,8 +41,8 @@ namespace krabs.SSO
                 serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.Migrate();
 
                 var context = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
-                //context.Database.EnsureCreated();
-                context.Database.Migrate();
+                context.Database.EnsureCreated();
+                //context.Database.Migrate();
                 if (!context.Clients.Any())
                 {
                     foreach (var client in Config.Config.GetClients())
@@ -73,11 +81,6 @@ namespace krabs.SSO
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMediatR(Assembly.GetExecutingAssembly());
-
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
@@ -96,7 +99,13 @@ namespace krabs.SSO
                 });
             });
 
-            services.AddTransient<INotifierMediatorService, NotifierMediatorService>();
+            RepositoryBootstraper.RegisterServices(services, Configuration);
+            services.AddAutoMapper();
+
+            // Registering Mappings automatically only works if the 
+            // Automapper Profile classes are in ASP.NET project
+            AutoMapperConfig.RegisterMappings();
+            
         }
 
         public void Configure(IApplicationBuilder app)

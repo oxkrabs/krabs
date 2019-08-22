@@ -2,19 +2,178 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="krabs.Application" t="IncludeRecursive">
+        <e p="Automapper" t="Include">
+          <e p="AutomapperConfig.cs" t="Include" />
+          <e p="DomainToViewModelMappingProfile.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="EventSourcedNormalizers" t="Include">
+          <e p="EventHistoryData.cs" t="Include" />
+        </e>
+        <e p="Interfaces" t="Include">
+          <e p="IClientAppService.cs" t="Include" />
+          <e p="IUserManageAppService.cs" t="Include" />
+        </e>
+        <e p="krabs.Application.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="ClientAppService.cs" t="Include" />
+          <e p="UserManageAppService.cs" t="Include" />
+        </e>
+        <e p="ViewModels" t="Include">
+          <e p="ClaimViewModel.cs" t="Include" />
+          <e p="ClientsViewModel" t="Include">
+            <e p="ClientListViewModel.cs" t="Include" />
+            <e p="ClientPropertyViewModel.cs" t="Include" />
+            <e p="ClientViewModel.cs" t="Include" />
+            <e p="CopyClientViewModel.cs" t="Include" />
+            <e p="RemoveClientClaimViewModel.cs" t="Include" />
+            <e p="RemoveClientSecretViewModel.cs" t="Include" />
+            <e p="RemoveClientViewModel.cs" t="Include" />
+            <e p="RemovePropertyViewModel.cs" t="Include" />
+            <e p="SaveClientClaimViewModel.cs" t="Include" />
+            <e p="SaveClientPropertyViewModel.cs" t="Include" />
+            <e p="SaveClientSecretViewModel.cs" t="Include" />
+            <e p="SaveClientViewModel.cs" t="Include" />
+          </e>
+          <e p="ProfilePictureViewModel.cs" t="Include" />
+          <e p="RoleViewModels" t="Include">
+            <e p="RemoveRoleViewModel.cs" t="Include" />
+            <e p="RemoveUserFromRoleViewModel.cs" t="Include" />
+            <e p="RoleViewModel.cs" t="Include" />
+            <e p="SaveRoleViewModel.cs" t="Include" />
+            <e p="UpdateRoleViewModel.cs" t="Include" />
+          </e>
+          <e p="SecretsViewModel.cs" t="Include" />
+          <e p="UserViewModels" t="Include">
+            <e p="AdminChangePasswordViewodel.cs" t="Include" />
+            <e p="ChangePasswordViewModel.cs" t="Include" />
+            <e p="ConfirmEmailViewModel.cs" t="Include" />
+            <e p="ForgotPasswordViewModel.cs" t="Include" />
+            <e p="RegisterUserViewModel.cs" t="Include" />
+            <e p="RemoveAccountViewModel.cs" t="Include" />
+            <e p="RemoveUserClaimViewModel.cs" t="Include" />
+            <e p="RemoveUserLoginViewModel.cs" t="Include" />
+            <e p="RemoveUserRoleViewModel.cs" t="Include" />
+            <e p="ResetPasswordViewModel.cs" t="Include" />
+            <e p="SaveUserClaimViewModel.cs" t="Include" />
+            <e p="SaveUserRoleViewModel.cs" t="Include" />
+            <e p="SetPasswordViewModel.cs" t="Include" />
+            <e p="UserListViewModel.cs" t="Include" />
+            <e p="UserLoginViewModel.cs" t="Include" />
+            <e p="UserViewModel.cs" t="Include" />
+          </e>
+        </e>
+      </e>
       <e p="krabs.Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="CommandHandlers" t="Include" />
+        <e p="Commands" t="Include" />
+        <e p="EventHandlers" t="Include">
+          <e p="NotificationHandler.cs" t="Include" />
+        </e>
+        <e p="Events" t="Include">
+          <e p="Client" t="Include" />
+          <e p="NotifyEVent.cs" t="Include" />
+        </e>
         <e p="Interfaces" t="Include">
+          <e p="IClientRepository.cs" t="Include" />
           <e p="IRepository.cs" t="Include" />
           <e p="IUnitOfWork.cs" t="Include" />
         </e>
         <e p="krabs.Domain.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="UserLogin.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
               <e p="krabs.Domain.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Validations" t="Include" />
+      </e>
+      <e p="krabs.Domain.Core" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Bus" t="Include">
+          <e p="IMediatorHandler.cs" t="Include" />
+        </e>
+        <e p="Commands" t="Include">
+          <e p="Client" t="Include">
+            <e p="ClientType.cs" t="Include" />
+          </e>
+          <e p="Command.cs" t="Include" />
+        </e>
+        <e p="Events" t="Include">
+          <e p="Event.cs" t="Include" />
+          <e p="IEventStore.cs" t="Include" />
+          <e p="IHandler.cs" t="Include" />
+          <e p="Message.cs" t="Include" />
+          <e p="StoredEvent.cs" t="Include" />
+        </e>
+        <e p="krabs.Domain.Core.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Entity.cs" t="Include" />
+          <e p="ValueObject.cs" t="Include" />
+        </e>
+        <e p="Notifications" t="Include">
+          <e p="DomainNotification.cs" t="Include" />
+          <e p="DomainNotificationHandler.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Domain.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ViewModels" t="Include">
+          <e p="PagingViewModel.cs" t="Include" />
+        </e>
+      </e>
+      <e p="krabs.Infrastructure.Bus" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="InMemoryBus.cs" t="Include" />
+        <e p="krabs.Infrastructure.Bus.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Infrastructure.Bus.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="krabs.Infrastructure.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Data" t="Include">
+          <e p="Migrations" t="Include">
+            <e p="20180109192453_CreateIdentitySchema.cs" t="Include" />
+            <e p="20180109192453_CreateIdentitySchema.Designer.cs" t="Include" />
+            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Entities" t="Include">
+          <e p="ApplicationDbContext.cs" t="Include" />
+        </e>
+        <e p="krabs.Infrastructure.Data.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Infrastructure.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repository" t="Include">
+          <e p="ClientRepository.cs" t="Include" />
+          <e p="Repository.cs" t="Include" />
         </e>
       </e>
       <e p="krabs.Infrastructure.Identity" t="IncludeRecursive">
@@ -33,7 +192,9 @@
       </e>
       <e p="krabs.Infrastructure.Identity.Config" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Configuration" t="Include" />
+        <e p="Configuration" t="Include">
+          <e p="IdentityServerConfig.cs" t="Include" />
+        </e>
         <e p="krabs.Infrastructure.Identity.Config.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -43,11 +204,24 @@
           </e>
         </e>
       </e>
+      <e p="krabs.Infrastructure.IoC" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="krabs.Infrastructure.IoC.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="krabs.Infrastructure.IoC.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="RepositoryBootstraper.cs" t="Include" />
+      </e>
       <e p="krabs.Services.UserManagement" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="ClientController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
         </e>
         <e p="krabs.Services.UserManagement.csproj" t="IncludeRecursive" />
@@ -60,16 +234,15 @@
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
+        <e p="tempkey.rsa" t="Include" />
         <e p="wwwroot" t="Include" />
       </e>
       <e p="krabs.sln" t="IncludeFlat" />
       <e p="krabs.SSO" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
-        <e p="AspIdUsers.db" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Config" t="Include">
           <e p="Config.cs" t="Include" />
-          <e p="IdentityServerConfig.cs" t="Include" />
         </e>
         <e p="Controllers" t="Include">
           <e p="Account" t="Include">
@@ -115,22 +288,16 @@
           <e p="SecurityHeadersAttribute.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
-          <e p="Entities" t="Include">
-            <e p="ApplicationDbContext.cs" t="Include" />
-          </e>
           <e p="Migrations" t="Include">
-            <e p="20180109192453_CreateIdentitySchema.cs" t="Include" />
-            <e p="20180109192453_CreateIdentitySchema.Designer.cs" t="Include" />
-            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
             <e p="IdentityServer" t="Include">
               <e p="ConfigurationDb" t="Include">
-                <e p="20190820205307_InitialIdentityServerConfigurationDbMigration.cs" t="Include" />
-                <e p="20190820205307_InitialIdentityServerConfigurationDbMigration.Designer.cs" t="Include" />
+                <e p="20190822174024_InitialIdentityServerConfigurationDbMigration.cs" t="Include" />
+                <e p="20190822174024_InitialIdentityServerConfigurationDbMigration.Designer.cs" t="Include" />
                 <e p="ConfigurationDbContextModelSnapshot.cs" t="Include" />
               </e>
               <e p="PersistedGrantDb" t="Include">
-                <e p="20190820205237_InitialIdentityServerPersistedGrantDbMigration.cs" t="Include" />
-                <e p="20190820205237_InitialIdentityServerPersistedGrantDbMigration.Designer.cs" t="Include" />
+                <e p="20190822174335_InitialIdentityServerPersistedGrantDbMigration.cs" t="Include" />
+                <e p="20190822174335_InitialIdentityServerPersistedGrantDbMigration.Designer.cs" t="Include" />
                 <e p="PersistedGrantDbContextModelSnapshot.cs" t="Include" />
               </e>
             </e>
@@ -138,6 +305,16 @@
         </e>
         <e p="identityserver4_log.txt" t="Include" />
         <e p="krabs.SSO.csproj" t="IncludeRecursive" />
+        <e p="Mediatr" t="Include">
+          <e p="Handlers" t="Include">
+            <e p="NotificationMessage.cs" t="Include" />
+            <e p="Notifier1.cs" t="Include" />
+          </e>
+          <e p="Service" t="Include">
+            <e p="INotifierMediatorService.cs" t="Include" />
+            <e p="NotifierMediatorService.cs" t="Include" />
+          </e>
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.1" t="Include">
