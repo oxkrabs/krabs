@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="2.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\krabs.Domain.Core\krabs.Domain.Core.csproj" />
+      <ProjectReference Include="..\krabs.Domain\krabs.Domain.csproj" />
+      <ProjectReference Include="..\krabs.Infrastructure.Identity\krabs.Infrastructure.Identity.csproj" />
+    </ItemGroup>
+
+</Project>

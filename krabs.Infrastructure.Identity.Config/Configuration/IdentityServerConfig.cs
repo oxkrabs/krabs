@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace krabs.SSO.Config
+namespace krabs.Infrastructure.Identity.Config.Configuration
 {
     public static class IdentityServerConfig
     {
@@ -15,7 +15,7 @@ namespace krabs.SSO.Config
         public static IIdentityServerBuilder AddIdentityServer(this IServiceCollection services,
             IConfiguration configuration, IHostingEnvironment environment, ILogger logger)
         {
-            var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+            //var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
             var connectionString = configuration.GetConnectionString("DefaultConnection");
             var builder = services.AddIdentityServer(options =>
                 {
@@ -27,14 +27,16 @@ namespace krabs.SSO.Config
                 .AddConfigurationStore(options =>
                 {
                     options.ConfigureDbContext = b =>
-                        b.UseSqlite(connectionString, sql =>
-                            sql.MigrationsAssembly(migrationsAssembly));
+                        b.UseNpgsql(connectionString, sql =>
+                            //sql.MigrationsAssembly(migrationsAssembly));
+                            sql.MigrationsAssembly("krabs.SSO"));
                 })
                 .AddOperationalStore(options =>
                 {
                     options.ConfigureDbContext = b =>
-                        b.UseSqlite(connectionString, sql =>
-                            sql.MigrationsAssembly(migrationsAssembly));
+                        b.UseNpgsql(connectionString, sql =>
+                            //sql.MigrationsAssembly(migrationsAssembly));
+                            sql.MigrationsAssembly("krabs.SSO"));
                     
                     options.EnableTokenCleanup = true;
                 })

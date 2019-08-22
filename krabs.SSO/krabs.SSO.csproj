@@ -16,16 +16,23 @@
         <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.5.0" />
 
         <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4" PrivateAssets="all">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" PrivateAssets="All" />
+        <PackageReference Include="SyrianBallaS.AutoMapper.Extensions.Microsoft.DependencyInjection.Signed" Version="3.2.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\krabs.Infrastructure.Bus\krabs.Infrastructure.Bus.csproj" />
       <ProjectReference Include="..\krabs.Infrastructure.Data\krabs.Infrastructure.Data.csproj" />
       <ProjectReference Include="..\krabs.Infrastructure.Identity.Config\krabs.Infrastructure.Identity.Config.csproj" />
       <ProjectReference Include="..\krabs.Infrastructure.Identity\krabs.Infrastructure.Identity.csproj" />
+      <ProjectReference Include="..\krabs.Infrastructure.IoC\krabs.Infrastructure.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\Migrations" />
     </ItemGroup>
 </Project>

@@ -12,11 +12,11 @@ namespace krabs.Infrastructure.Bus
     public sealed class InMemoryBus : IMediatorHandler
     {
         private readonly IMediator _mediator;
-        private readonly IEventStore _eventStore;
+        //private readonly IEventStore _eventStore;
 
-        public InMemoryBus(IEventStore eventStore, IMediator mediator)
+        public InMemoryBus(IMediator mediator)
         {
-            _eventStore = eventStore;
+            //_eventStore = eventStore;
             _mediator = mediator;
         }
 
@@ -27,8 +27,8 @@ namespace krabs.Infrastructure.Bus
 
         public Task RaiseEvent<T>(T @event) where T : Event
         {
-            if (!@event.MessageType.Equals("DomainNotification"))
-                _eventStore?.Save(@event);
+//            if (!@event.MessageType.Equals("DomainNotification"))
+//                _eventStore?.Save(@event);
 
             return _mediator.Publish(@event);
         }
