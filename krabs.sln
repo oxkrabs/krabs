@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Web.UserManagement", "krabs.Web.UserManagement\krabs.Web.UserManagement.csproj", "{C1E597A0-0C1C-4B5D-9902-3C77BF3CE955}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,10 @@ Global
 		{0B24A435-7712-47DB-ADCA-AFCA1FDC1438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B24A435-7712-47DB-ADCA-AFCA1FDC1438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B24A435-7712-47DB-ADCA-AFCA1FDC1438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E597A0-0C1C-4B5D-9902-3C77BF3CE955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E597A0-0C1C-4B5D-9902-3C77BF3CE955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E597A0-0C1C-4B5D-9902-3C77BF3CE955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E597A0-0C1C-4B5D-9902-3C77BF3CE955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +112,7 @@ Global
 		{55EBBB79-ED62-46EC-BF1F-7A0C57C4470A} = {7A2A7BBB-6D6E-4650-9E67-D0F285C406C4}
 		{357E00D1-DBA6-4D53-BA79-1582B41DAD5E} = {7A2A7BBB-6D6E-4650-9E67-D0F285C406C4}
 		{0B24A435-7712-47DB-ADCA-AFCA1FDC1438} = {7A2A7BBB-6D6E-4650-9E67-D0F285C406C4}
+		{C1E597A0-0C1C-4B5D-9902-3C77BF3CE955} = {09359444-5193-44AA-89ED-977C349914C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {463F970B-BFE9-4E69-A402-E8318392034E}
