@@ -2,11 +2,13 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using krabs.Application.Interfaces;
 using krabs.Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace krabs.Services.UserManagement.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class ClientController
     {
         private readonly IClientRepository _clientRepository;
@@ -20,10 +22,10 @@ namespace krabs.Services.UserManagement.Controllers
             _userManageAppService = userManageAppService;
         }
 
-        public async Task Get()
+        public async Task<IActionResult> Get()
         {
             var user = await _userManageAppService.GetUserAsync("9c0b4e2a-4c3f-4205-b48f-960897b73c16");
-            Debug.WriteLine("Hello");
+            return new OkObjectResult(user);
         }
     }
 }

@@ -11,7 +11,7 @@ export default class Home extends React.Component<RouteComponentProps<{}>, {}> {
 
     callApi() {
         // quick and dirty test for calling the api
-        axios.get("http://localhost:5555/test")
+        axios.get("https://localhost:5011/api/client")
             .then((response: any) => {
                 console.log(response);
                 this.setState({ result: JSON.stringify(response.data, null, 2) });

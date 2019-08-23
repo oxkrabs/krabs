@@ -34,10 +34,12 @@ namespace krabs.Infrastructure.IoC
             
             services.AddTransient<IClientAppService, ClientAppService>();
             services.AddTransient<IUserManageAppService, UserManageAppService>();
-
-//            services.AddAutoMapper();
-//            
-//            AutoMapperConfig.RegisterMappings();
+            
+            //services.AddAutoMapper();
+            services.AddAutoMapper();
+            // Registering Mappings automatically only works if the 
+            // Automapper Profile classes are in ASP.NET project
+            AutoMapperConfig.RegisterMappings();
         }
     }
 }

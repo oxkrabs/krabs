@@ -100,12 +100,7 @@ namespace krabs.SSO
             });
 
             RepositoryBootstraper.RegisterServices(services, Configuration);
-            services.AddAutoMapper();
 
-            // Registering Mappings automatically only works if the 
-            // Automapper Profile classes are in ASP.NET project
-            AutoMapperConfig.RegisterMappings();
-            
         }
 
         public void Configure(IApplicationBuilder app)
