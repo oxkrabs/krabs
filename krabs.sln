@@ -21,15 +21,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "krabs.Domain", "krabs.Domai
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "krabs.Services.UserManagement", "krabs.Services.UserManagement\krabs.Services.UserManagement.csproj", "{CB20426B-3310-4C3C-B29A-E8A436F4A7BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Infrastructure.Data", "krabs.Infrastructure.Data\krabs.Infrastructure.Data.csproj", "{D9695F5D-081D-4A11-B82F-A7A1B50E18CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "krabs.Infrastructure.Data", "krabs.Infrastructure.Data\krabs.Infrastructure.Data.csproj", "{D9695F5D-081D-4A11-B82F-A7A1B50E18CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Domain.Core", "krabs.Domain.Core\krabs.Domain.Core.csproj", "{5E49A077-1667-4AFF-90C1-699985ED74C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "krabs.Domain.Core", "krabs.Domain.Core\krabs.Domain.Core.csproj", "{5E49A077-1667-4AFF-90C1-699985ED74C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Infrastructure.IoC", "krabs.Infrastructure.IoC\krabs.Infrastructure.IoC.csproj", "{55EBBB79-ED62-46EC-BF1F-7A0C57C4470A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "krabs.Infrastructure.IoC", "krabs.Infrastructure.IoC\krabs.Infrastructure.IoC.csproj", "{55EBBB79-ED62-46EC-BF1F-7A0C57C4470A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Infrastructure.Bus", "krabs.Infrastructure.Bus\krabs.Infrastructure.Bus.csproj", "{357E00D1-DBA6-4D53-BA79-1582B41DAD5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "krabs.Infrastructure.Bus", "krabs.Infrastructure.Bus\krabs.Infrastructure.Bus.csproj", "{357E00D1-DBA6-4D53-BA79-1582B41DAD5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krabs.Application", "krabs.Application\krabs.Application.csproj", "{0B24A435-7712-47DB-ADCA-AFCA1FDC1438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "krabs.Application", "krabs.Application\krabs.Application.csproj", "{0B24A435-7712-47DB-ADCA-AFCA1FDC1438}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8922896-A8CF-4E5A-8A05-E18207F1B920}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
