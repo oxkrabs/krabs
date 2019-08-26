@@ -116,6 +116,7 @@ namespace krabs.SSO
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseHsts();
             app.UseStaticFiles();
             app.UseIdentityServer();
             app.UseMvcWithDefaultRoute();

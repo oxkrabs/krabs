@@ -98,8 +98,8 @@ namespace krabs.Services.UserManagement
                 })
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "http://localhost:5000"; // Who do we trust?
-                    options.RequireHttpsMetadata = false;
+                    options.Authority = "https://localhost:5001"; // Who do we trust?
+                    options.RequireHttpsMetadata = true;
                     options.Audience = "api1";                   // Who are we?
                 });
             
@@ -113,7 +113,7 @@ namespace krabs.Services.UserManagement
             services.AddCors(o =>
             {
                 o.AddPolicy("CorsPolicy", _ => 
-                    _.WithOrigins("http://localhost:5100", "http://localhost:5010").AllowAnyMethod()
+                    _.WithOrigins("http://localhost:5100", "http://localhost:5010", "https://localhost:5011", "https://localhost:5101").AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials());
             });
@@ -124,7 +124,7 @@ namespace krabs.Services.UserManagement
                 options.AddSecurityDefinition("oauth2", new OAuth2Scheme
                 {
                     Flow = "implicit",
-                    AuthorizationUrl = "http://localhost:5000/connect/authorize",
+                    AuthorizationUrl = "https://localhost:5001/connect/authorize",
                     Scopes = new Dictionary<string, string> { 
                         { "demo_api", "Demo API - full access" },
                         { "api1", "normal api"}

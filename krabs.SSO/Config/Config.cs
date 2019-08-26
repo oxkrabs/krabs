@@ -70,8 +70,8 @@ namespace krabs.SSO.Config
                     ClientName = "Swagger UI for demo_api",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
-                    RedirectUris = {"http://localhost:5010/o2c.html", "https://localhost:5011/o2c.html"},
-                    AllowedScopes = { "demo_api" }
+                    RedirectUris = {"http://localhost:5010/oauth2-redirect.html", "https://localhost:5011/oauth2-redirect.html"},
+                    AllowedScopes = { "demo_api", "api1" }
                 }
             };
         }

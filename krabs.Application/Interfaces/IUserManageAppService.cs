@@ -13,17 +13,14 @@ namespace krabs.Application.Interfaces
     {
         Task UpdateProfile(UserViewModel model);
         Task UpdateProfilePicture(ProfilePictureViewModel model);
-        
         Task ChangePassword(ChangePasswordViewModel model);
         Task CreatePassword(SetPasswordViewModel model);
         Task RemoveAccount(RemoveAccountViewModel model);
         Task<bool> HasPassword(Guid userId);
         Task<IEnumerable<EventHistoryData>> GetHistoryLogs(string username);
-        
         Task<UserViewModel> GetUserDetails(string username);
         Task<UserViewModel> GetUserAsync(string userId);
         Task UpdateUser(UserViewModel model);
-
         Task<IEnumerable<ClaimViewModel>> GetClaims(string userName);
         Task SaveClaim(SaveUserClaimViewModel model);
         Task RemoveClaim(RemoveUserClaimViewModel model);
