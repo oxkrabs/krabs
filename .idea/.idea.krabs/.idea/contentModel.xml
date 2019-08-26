@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
+      <e p="docker-compose.yml" t="Include" />
       <e p="krabs.Application" t="IncludeRecursive">
         <e p="Automapper" t="Include">
           <e p="AutomapperConfig.cs" t="Include" />
@@ -407,6 +409,8 @@
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="README.md" t="Include" />
+      <e p="Solution Items" t="Include" />
       <e p="Spa" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
