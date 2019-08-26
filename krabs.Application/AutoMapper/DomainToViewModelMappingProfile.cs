@@ -11,6 +11,7 @@ namespace krabs.Application.AutoMapper
         public DomainToViewModelMappingProfile()
         {
             CreateMap<ApplicationUser, UserViewModel>(MemberList.Destination);
+            CreateMap<ApplicationUser, UserListViewModel>(MemberList.Destination);
         }
     }
 }

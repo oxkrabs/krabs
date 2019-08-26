@@ -63,6 +63,15 @@ namespace krabs.SSO.Config
                         "email",
                         "api1"
                     }
+                },
+                new Client
+                {
+                    ClientId = "demo_api_swagger",
+                    ClientName = "Swagger UI for demo_api",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+                    RedirectUris = {"http://localhost:5010/o2c.html", "https://localhost:5011/o2c.html"},
+                    AllowedScopes = { "demo_api" }
                 }
             };
         }
@@ -87,7 +96,8 @@ namespace krabs.SSO.Config
         {
             return new ApiResource[]
             {
-                new ApiResource("api1", "My Api Demo app")
+                new ApiResource("api1", "My Api Demo app"),
+                new ApiResource("demo_api", "My Swagger app"), 
             };
         }
     }
