@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using krabs.Application.EventSourcedNormalizers;
@@ -9,8 +10,10 @@ using krabs.Application.ViewModels.RoleViewModels;
 using krabs.Application.ViewModels.UserViewModels;
 using krabs.Domain.Core.Bus;
 using krabs.Domain.Core.ViewModels;
+using krabs.Domain.Interfaces;
 using krabs.Infrastructure.Identity.Entities;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace krabs.Application.Services
 {
@@ -20,7 +23,9 @@ namespace krabs.Application.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IMapper _mapper;
 
-        public UserManageAppService(UserManager<ApplicationUser> userManager, IMapper mapper, IMediatorHandler bus)
+        public UserManageAppService(UserManager<ApplicationUser> userManager,
+            IMapper mapper,
+            IMediatorHandler bus)
         {
             Bus = bus;
             _userManager = userManager;
@@ -128,9 +133,14 @@ namespace krabs.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<ListOfUsersViewModel> GetUsers(PagingViewModel page)
+        public async Task<ListOfUsersViewModel> GetUsers(PagingViewModel paging)
         {
-            throw new NotImplementedException();
+            var users = _userManager
+                .Users
+                .Skip((paging.Page - 1) * paging.Quantity)
+                .Take(paging.Quantity);
+            var total = await _userManager.Users.CountAsync();
+            return new ListOfUsersViewModel(_mapper.Map<IEnumerable<UserListViewModel>>(users), total);
         }
         
         public void Dispose()

@@ -10,6 +10,7 @@ using krabs.Infrastructure.Data.Entities;
 using krabs.Infrastructure.Identity.Config.Configuration;
 using krabs.Infrastructure.Identity.Entities;
 using krabs.Infrastructure.IoC;
+using krabs.Services.UserManagement.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,6 +23,7 @@ using krabs.SSO.Config;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace krabs.Services.UserManagement
 {
@@ -111,10 +113,26 @@ namespace krabs.Services.UserManagement
             services.AddCors(o =>
             {
                 o.AddPolicy("CorsPolicy", _ => 
-                    _.WithOrigins("http://localhost:5100").AllowAnyMethod()
+                    _.WithOrigins("http://localhost:5100", "http://localhost:5010").AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials());
             });
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Info {Title = "Protected api", Version = "v1"});
+                options.AddSecurityDefinition("oauth2", new OAuth2Scheme
+                {
+                    Flow = "implicit",
+                    AuthorizationUrl = "http://localhost:5000/connect/authorize",
+                    Scopes = new Dictionary<string, string> { 
+                        { "demo_api", "Demo API - full access" },
+                        { "api1", "normal api"}
+                    }
+                });
+                options.OperationFilter<AuthorizeCheckOperationFilter>();
+            });
+            
             RepositoryBootstraper.RegisterServices(services, Configuration);
         }
 
@@ -131,6 +149,15 @@ namespace krabs.Services.UserManagement
             }
             app.UseCors("CorsPolicy");
             app.UseAuthentication();
+            app.UseSwagger();
+
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                options.RoutePrefix = string.Empty;
+                options.OAuthClientId("demo_api_swagger");
+                options.OAuthAppName("Demo API - Swagger");
+            });
             app.UseHttpsRedirection();
             app.UseMvc();
         }
