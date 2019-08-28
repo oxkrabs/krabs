@@ -145,7 +145,6 @@ namespace krabs.Application.Services
         
         public void Dispose()
         {
-            throw new NotImplementedException();
         }
     }
 }
