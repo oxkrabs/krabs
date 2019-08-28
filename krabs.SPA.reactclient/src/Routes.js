@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import {App} from "./components/App";
 import Callback from "./components/Callback";
 import {Route} from 'react-router-dom';
@@ -9,7 +10,6 @@ import {Unauthorized} from "./pages/Unauthorized";
 import Layout from "./components/Layout";
 import UserList from "./pages/UserList";
 
-
 function makeUserManager(
   config,
   umClass
@@ -19,11 +19,11 @@ function makeUserManager(
 }
 const userManagerConfig = {
   client_id: "spa",
-  redirect_uri: "http://localhost:3000/callback",
+  redirect_uri: "http://localhost:5100/callback",
   response_type: "token id_token",
   scope: "openid profile api1",
   authority: "http://localhost:5000",
-  silent_redirect_uri: "http://localhost:3000/silent_renew.html",
+  silent_redirect_uri: "http://localhost:5100/silent_renew.html",
   automaticSilentRenew: true,
   filterProtocolClaims: true,
   loadUserInfo: true,
@@ -63,6 +63,12 @@ class Routes extends React.Component {
         console.log("RENDER");
         if (user && !user.expired) {
           console.log("USER LOGGED IN");
+
+          // Setup the axios headers
+          if(user && !user.expired) {
+            axios.defaults.headers.common["Authorization"] = 'Bearer ' + user.access_token;
+          }
+
           this.setState({
             shouldRender: true,
             loggedIn: true

@@ -23,6 +23,7 @@ using krabs.SSO.Config;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace krabs.Services.UserManagement
@@ -98,8 +99,8 @@ namespace krabs.Services.UserManagement
                 })
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "https://localhost:5001"; // Who do we trust?
-                    options.RequireHttpsMetadata = true;
+                    options.Authority = "http://localhost:5000"; // Who do we trust?
+                    options.RequireHttpsMetadata = false;
                     options.Audience = "api1";                   // Who are we?
                 });
             
@@ -117,6 +118,7 @@ namespace krabs.Services.UserManagement
                         .AllowAnyHeader()
                         .AllowCredentials());
             });
+            IdentityModelEventSource.ShowPII = true;
 
             services.AddSwaggerGen(options =>
             {
