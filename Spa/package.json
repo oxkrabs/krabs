@@ -42,7 +42,7 @@
     "aspnet-webpack-react": "^4.0.0",
     "autoprefixer": "^7.1.6",
     "awesome-typescript-loader": "5.2.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-loader": "^8.0.2",
     "blueimp-load-image": "^2.19.0",
     "css-loader": "1.0.0",
